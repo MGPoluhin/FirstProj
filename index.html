@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Тестовое задание</title>
+</head>
+
+<body>
+    <main class="main-container">
+        <div class="picture-container">
+            <p class="picture-text">Hello<br>my friend</p>
+            <img src="img/picturegirl.png" alt="" class="picture">
+        </div>
+        <form class="form">
+            <ul class="list">
+                <li class="list-item">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" name="username" placeholder="Имя">
+                </li>
+                <li class="list-item">
+                    <label for="tel">Телефон</label>
+                    <input type="tel" id="tel" name="phone" placeholder="Номер телефона">
+                </li>
+                <li class="list-item">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" name="password" placeholder="********">
+                </li>
+            </ul>
+
+            <label class=" container">Люблю свою работу
+                <input type="radio" checked="checked" name="radio" value="LoveMyJob">
+                <span class="checkmark"></span>
+              </label>
+            <label class="container">Очень люблю свою работу
+                <input type="radio" name="radio" value="ReallyLoveMyJob">
+                <span class="checkmark "></span>
+              </label>
+            <button type="submit" disabled class="submit-button">Отправить заявку</button>
+        </form>
+    </main>
+
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>

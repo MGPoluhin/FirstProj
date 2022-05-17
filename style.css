@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img,
+form,
+div,
+main {
+    transition: all 0.25s ease-in-out;
+}
+
+html {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    padding: 112px;
+}
+
+.picture-container {
+    max-width: 400px;
+    max-height: 595px;
+    position: relative;
+    margin-right: 176px;
+    flex-shrink: 0;
+}
+
+.picture {
+    object-fit: cover;
+    max-width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.picture-text {
+    position: absolute;
+    width: 376px;
+    height: 192px;
+    left: 150px;
+    top: 268px;
+    font-weight: 700;
+    font-size: 88px;
+    line-height: 96px;
+    color: #7d98f7;
+    transform: rotate(-45deg);
+    user-select: none;
+}
+
+.list {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.list-item input {
+    padding: 0 16px;
+    font-weight: 600;
+    max-width: 400px;
+    height: 40px;
+    color: rgb(34, 34, 34);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    border-radius: 15px;
+    background: #f8f8f8;
+}
+
+.list-item input::placeholder {
+    color: #a9a9a9;
+}
+
+.list-item input:hover {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.list-item input:focus {
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    background: #ffffff;
+}
+
+.list-item label {
+    color: rgba(34, 34, 34, 1);
+    padding-bottom: 8px;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.submit-button {
+    margin-top: 40px;
+    align-self: flex-end;
+    width: 218px;
+    height: 56px;
+    background: #7d98f6;
+    border-radius: 25px;
+    border: none;
+    font-weight: 800;
+    color: #fff;
+    font-size: 18px;
+    line-height: 32px;
+    cursor: pointer;
+}
+
+.submit-button:disabled {
+    background-color: #838080;
+    cursor: default;
+}
+
+.list-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-item:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.container {
+    display: block;
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 46px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    font-weight: 400;
+    color: rgba(136, 136, 136, 1);
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 32px;
+    width: 32px;
+    background-color: rgba(248, 248, 248, 1);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.container input:checked~.checkmark {
+    background-color: rgba(125, 152, 246, 1);
+    border: none;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    top: 10px;
+    left: 10px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: white;
+}
+
+@media screen and (max-width: 1440px) {
+    .main-container {
+        padding: 35px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .picture-container {
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-container {
+        padding: 15px;
+    }
+    .form {
+        width: 100%;
+        max-width: 400px;
+    }
+    .picture-container {
+        border-radius: 50%;
+        width: 330px;
+        height: 330px;
+        overflow: hidden;
+    }
+    .picture-text {
+        width: 188;
+        height: 96;
+        left: 140px;
+        top: 110px;
+        font-size: 44px;
+        line-height: 48px;
+    }
+}
